@@ -19,4 +19,4 @@ alt.Chart(movie_2000).mark_point(filled=True).encode(
     alt.Y('Worldwide_Gross'),
     alt.Size('US_Gross'),
     alt.Color('Major_Genre'),
-    alt.OpacityValue(0.7)
+    alt.OpacityValue(0.7))

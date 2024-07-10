@@ -12,5 +12,5 @@ image = Image.open('logo2.png')
 st.image(image, caption='Socialize your knowledge')
 
 empleados= pd.read_csv('Employee_data.csv')
-
+empleados
 

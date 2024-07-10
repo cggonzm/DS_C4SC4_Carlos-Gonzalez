@@ -13,11 +13,8 @@ st.image(image, caption='Socialize your knowledge')
 
 empleados= pd.read_csv('Employee_data.csv')
 
-st.write('### DASHBOARD')
-st.dataframe(df)
-
-genero= st.sidebar.radio('Seleccionar genero', df['gender'].unique())
+genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
 #puntaje= st.sidebar.slider('Select a rating range', 0, 300, (0, 300))
 
 
-st.dataframe(df)
+st.dataframe(empleados)

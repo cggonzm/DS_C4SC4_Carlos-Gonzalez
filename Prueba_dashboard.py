@@ -15,6 +15,6 @@ empleados= pd.read_csv('Employee_data.csv')
 
 
 genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
-puntaje= st.sidebar.slider('Puntaje de desempeño', 0, 4, (0,4))
+puntaje= st.sidebar.slider("Select a rating range", 0, 300, (0, 300))
 
 empleados

@@ -17,6 +17,3 @@ genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
 st.write('Genero seleccionado', genero)
 
 #puntaje= st.sidebar.slider('Select a rating range', 0, 300, (0, 300))
-
-
-st.dataframe(empleados)

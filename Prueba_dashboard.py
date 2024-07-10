@@ -11,6 +11,6 @@ Analisis de desempeño y datos personales de los colaboradores de socialize your
 image = Image.open('logo2.png')
 st.image(image, caption='Socialize your knowledge')
 
-empleados= pd.read_csv('/Employee_data.csv')
+empleados= pd.read_csv('Employee_data.csv')
 
 

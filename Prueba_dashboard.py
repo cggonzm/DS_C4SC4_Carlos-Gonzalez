@@ -14,6 +14,6 @@ st.image(image, caption='Socialize your knowledge')
 empleados= pd.read_csv('Employee_data.csv')
 
 
-gender= st.radio('Seleccionar genero', empleados['gender'].unique())
+gender= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
 
 

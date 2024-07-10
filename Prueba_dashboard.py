@@ -1,19 +1,12 @@
-from vega_datasets import data as vega_data
-import pandas as pd
+# Escribe un título y algo de texto para la app:
+'''
+# Este es el título del documento
 
-movie_df = pd.read_json(vega_data.movies.url)
+Este es un _marcador_.
+'''
 
-def extract_year(value):
-    return pd.to_datetime(value, format='%b %d %Y').year
+df = pd.DataFrame({'col1': [1,2,3]})
+df # <-- Despliega el conjunto de datos
 
-movie_df["Year"] = movie_df["Release_Date"].apply(extract_year)
-
-movie_2000 = movie_df[movie_df["Year"] == 2000]
-
-alt.Chart(movie_2000).mark_point(filled=True).encode(
-    alt.X('Production_Budget'),
-    alt.Y('Worldwide_Gross'),
-    alt.Size('US_Gross'),
-    alt.Color('Major_Genre'),
-    alt.OpacityValue(0.7)
-)
+x = 10
+'x', x # <-- Escribe el carácter ‘x’ y luego el valor de x

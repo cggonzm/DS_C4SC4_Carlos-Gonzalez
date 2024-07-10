@@ -7,5 +7,5 @@ st.title('DASHBOARD DESEMPEÑO SOCIALIZE YOUR KNOWLEDGE')
 Analisis de desempeño y datos personales de los colaboradores de socialize your knowledge_.
 '''
 
-image = Image.open('logo.png')
+image = Image.open('logo2.png')
 st.image(image, caption='Socialize your knowledge')

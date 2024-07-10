@@ -14,4 +14,6 @@ st.image(image, caption='Socialize your knowledge')
 empleados= pd.read_csv('Employee_data.csv')
 st.table(empleados)
 
-add_selectbox=st.sidebar.selectbox('Genero del empleado?',('gender'))
+gender= st.radio('Seleccionar genero', empleados[gender].unique())
+
+

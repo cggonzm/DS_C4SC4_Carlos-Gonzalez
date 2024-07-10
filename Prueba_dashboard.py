@@ -1,15 +1,7 @@
-import pandas as pd
 import streamlit as st
+from PIL import Image
 
-# Escribe un título y algo de texto para la app:
+st.title('DASHBOARD DESEMPEÑO SOCIALIZE YOUR KNOWLEDGE')
+
 '''
-# Este es el título del documento
-
-Este es un _marcador_.
-'''
-
-df = pd.DataFrame({'col1': [1,2,3]})
-df # <-- Despliega el conjunto de datos
-
-x = 10
-'x', x # <-- Escribe el carácter ‘x’ y luego el valor de x
+Analisis de desempeño y datos personales de los colaboradores de socialize your knowledge_.

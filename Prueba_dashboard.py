@@ -1,3 +1,6 @@
+import pandas as pd
+import streamlit as st
+
 # Escribe un título y algo de texto para la app:
 '''
 # Este es el título del documento

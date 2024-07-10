@@ -5,7 +5,7 @@ import pandas as pd
 st.title('DASHBOARD DESEMPEÑO SOCIALIZE YOUR KNOWLEDGE')
 
 '''
-Analisis de desempeño y datos personales de los colaboradores de socialize your knowledge_.
+Analisis de desempeño y datos personales de los colaboradores de socialize your knowledge.
 '''
 
 image = Image.open('logo2.png')
@@ -16,4 +16,4 @@ empleados= pd.read_csv('Employee_data.csv')
 genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
 st.write('Genero seleccionado', genero)
 
-puntaje= st.slider('Select a rating range', 0, 300, (0, 300))
+puntaje= st.sidebar.slider('Select a rating range', 0, 300, (0, 300))

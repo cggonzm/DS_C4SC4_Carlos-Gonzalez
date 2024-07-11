@@ -1,8 +1,7 @@
 import streamlit as st
 from PIL import Image
 import pandas as pd
-!pip install plotly
-import plotly.express as px
+#import plotly.express as px
 
 #import altair as alt
 #from vega_datasets import data

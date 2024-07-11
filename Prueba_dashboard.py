@@ -1,3 +1,4 @@
+!pip install altair_viewer
 import streamlit as st
 from PIL import Image
 import pandas as pd

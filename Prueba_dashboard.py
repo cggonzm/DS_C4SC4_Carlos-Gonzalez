@@ -17,8 +17,8 @@ empleados= empleados[['name_employee', 'birth_date', 'age', 'gender', 'marital_s
                               'salary', 'performance_score', 'last_performance_date', 'average_work_hours', 'satisfaction_level', 'absences']]
 
 
-empleados_filtered= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
-
+genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
+empleados_filtered = empleados[empleados['gender'] == genero]
 
 #CONTROL PARA SELECCIONAR UN RANGO DEL PUNTAJE DE DESEMPEÑO DEL EMPLEADO
 minScore = empleados["performance_score"].min()

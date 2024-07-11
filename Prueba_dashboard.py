@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import pandas as pd
+import plotly.express as px
 
 st.title('DASHBOARD DESEMPEÑO SOCIALIZE YOUR KNOWLEDGE')
 
@@ -14,6 +15,12 @@ st.image(image, caption='Socialize your knowledge')
 empleados= pd.read_csv('Employee_data.csv')
 
 genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
-st.write('Genero seleccionado', genero)
 
 puntaje= st.sidebar.slider('Rango de puntaje', 0, 4, (0, 4))
+
+genero= st.sidebar.radio('Estado civil', empleados['marital_status'].unique())
+
+
+
+fig= px.histogram(employee_data, x="performance_score")
+fig.show()

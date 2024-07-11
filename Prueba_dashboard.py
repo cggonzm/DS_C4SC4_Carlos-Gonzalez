@@ -1,10 +1,10 @@
 import streamlit as st
 from PIL import Image
 import pandas as pd
-import plotly.express as px
+#import plotly.express as px
 
-#import altair as alt
-#from vega_datasets import data
+import altair as alt
+from vega_datasets import data
 
 st.title('DASHBOARD DESEMPEÑO SOCIALIZE YOUR KNOWLEDGE')
 

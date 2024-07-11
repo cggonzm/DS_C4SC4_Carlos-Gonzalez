@@ -17,7 +17,7 @@ empleados= empleados[['name_employee', 'birth_date', 'age', 'gender', 'marital_s
                               'salary', 'performance_score', 'last_performance_date', 'average_work_hours', 'satisfaction_level', 'absences']]
 
 
-st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
+empleados_filtered= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
 
 
 #CONTROL PARA SELECCIONAR UN RANGO DEL PUNTAJE DE DESEMPEÑO DEL EMPLEADO

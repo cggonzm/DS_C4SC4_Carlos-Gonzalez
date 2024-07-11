@@ -19,7 +19,16 @@ empleados= empleados[['name_employee', 'birth_date', 'age', 'gender', 'marital_s
 
 genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
 
-puntaje= st.sidebar.slider('Rango de puntaje', 0, 4, (0, 4))
+#puntaje= st.sidebar.slider('Rango de puntaje', 0, 4, (0, 4))
+
+user_num_input = st.slider(
+                    f"Values for",
+                    min_value=_min,
+                    max_value=_max,
+                    value=(0, 4),
+                    step=step,
+                )
+df = employee_data[employee_data['performance_score'].between(*user_num_input)]
 
 estado_civil = st.sidebar.selectbox('Estado civil:', empleados['marital_status'].unique())
 

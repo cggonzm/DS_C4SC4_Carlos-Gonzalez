@@ -20,4 +20,4 @@ puntaje= st.sidebar.slider('Rango de puntaje', 0, 4, (0, 4))
 
 genero= st.sidebar.radio('Estado civil', empleados['marital_status'].unique())
 
-fig= px.histogram(employee_data, x="performance_score")
+#fig= px.histogram(employee_data, x="performance_score")

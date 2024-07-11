@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 import pandas as pd
-import plotly.express as px
+#import plotly.express as px
 
 st.title('DASHBOARD DESEMPEÑO SOCIALIZE YOUR KNOWLEDGE')
 

@@ -1,7 +1,9 @@
 import streamlit as st
 from PIL import Image
 import pandas as pd
-#import plotly.express as px
+import numpy as np
+from bokeh.io import show, output_file
+from bokeh.plotting import figure
 
 st.title('DASHBOARD DESEMPEÑO SOCIALIZE YOUR KNOWLEDGE')
 
@@ -20,5 +22,10 @@ puntaje= st.sidebar.slider('Rango de puntaje', 0, 4, (0, 4))
 
 genero= st.sidebar.radio('Estado civil', empleados['marital_status'].unique())
 
-#fig= px.histogram(employee_data, x="performance_score")
-#fig.show()
+hist, edges = np.histogram(employee_data['performance_score'], density=True, bins=50)
+
+p = figure()
+p.quad(top=hist, bottom=0, left=edges[:-1], right=edges[1:], line_color="white")
+
+output_file("hist.html")
+show(p)

@@ -22,11 +22,11 @@ empleados_filtered = empleados[empleados['gender'] == genero]
 #st.write(empleados_filtered)
 
 #CONTROL PARA SELECCIONAR UN RANGO DEL PUNTAJE DE DESEMPEÑO DEL EMPLEADO
-minScore = empleados["performance_score"].min()
-maxScore = empleados["performance_score"].max()
+minScore = empleados_filtered["performance_score"].min()
+maxScore = empleados_filtered["performance_score"].max()
 mylios = st.sidebar.slider('performance_score', min_value=minScore, max_value=maxScore, value=[minScore, maxScore])
-empleados_filtered = empleados[(empleados["performance_score"] >= mylios[0]) & (empleados["performance_score"] <= mylios[1])].copy()
-st.write(empleados_filtered)
+empleados_filtered_2 = empleados_filtered[(empleados_filtered["performance_score"] >= mylios[0]) & (empleados_filtered["performance_score"] <= mylios[1])].copy()
+st.write(empleados_filtered_2)
 
 
 

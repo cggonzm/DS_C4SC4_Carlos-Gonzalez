@@ -14,7 +14,7 @@ image = Image.open('logo2.png')
 st.image(image, caption='Socialize your knowledge')
 
 empleados= pd.read_csv('Employee_data.csv')
-empleados= employee_data[['name_employee', 'birth_date', 'age', 'gender', 'marital_status', 'hiring_date', 'position',
+empleados= empleados[['name_employee', 'birth_date', 'age', 'gender', 'marital_status', 'hiring_date', 'position',
                               'salary', 'performance_score', 'last_performance_date', 'average_work_hours', 'satisfaction_level', 'absences']]
 
 genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())

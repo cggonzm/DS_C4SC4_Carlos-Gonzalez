@@ -19,5 +19,7 @@ genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
 
 puntaje= st.sidebar.slider('Rango de puntaje', 0, 4, (0, 4))
 
-hist = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin=True),y='count()')
+hist = alt.Chart(employee_data).mark_bar().encode(alt.X('performance_score', bin = alt.BinParams(maxbins = 6)),
+                                                  y='count()').properties(title='Distribución puntajes de desempeño')
+                                                  
 hist

@@ -1,9 +1,8 @@
-!pip install altair_viewer
 import streamlit as st
 from PIL import Image
 import pandas as pd
-import altair as alt
-from vega_datasets import data
+#import altair as alt
+#from vega_datasets import data
 
 st.title('DASHBOARD DESEMPEÑO SOCIALIZE YOUR KNOWLEDGE')
 
@@ -20,7 +19,7 @@ genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
 
 puntaje= st.sidebar.slider('Rango de puntaje', 0, 4, (0, 4))
 
-genero= st.sidebar.radio('Estado civil', empleados['marital_status'].unique())
+#genero= st.sidebar.radio('Estado civil', empleados['marital_status'].unique())
 
-hist = alt.Chart(employee_data).mark_bar().encode(x = 'performance_score', y = 'count()')
-hist.show()
+#hist = alt.Chart(employee_data).mark_bar().encode(x = 'performance_score', y = 'count()')
+#hist.show()

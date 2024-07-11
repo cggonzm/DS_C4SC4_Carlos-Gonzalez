@@ -19,14 +19,12 @@ empleados= empleados[['name_employee', 'birth_date', 'age', 'gender', 'marital_s
 
 genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
 
-#puntaje= st.sidebar.slider('Rango de puntaje', 0, 4, (0, 4))
 
-
-
+#Control para seleccionar un rango del puntaje de desempeño del empleado
 minScore = empleados["performance_score"].min()
 maxScore = empleados["performance_score"].max()
 
-mylios = st.slider('performance_score', min_value=minScore, max_value=maxScore, value=[minScore, maxScore])
+mylios = st.sidebar.slider('performance_score', min_value=minScore, max_value=maxScore, value=[minScore, maxScore])
 
 empleados_filtered = empleados[(empleados["performance_score"] >= mylios[0]) & (empleados["performance_score"] <= mylios[1])].copy()
 st.write(empleados_filtered)

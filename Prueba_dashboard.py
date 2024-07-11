@@ -20,4 +20,4 @@ genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
 puntaje= st.sidebar.slider('Rango de puntaje', 0, 4, (0, 4))
 
 hist = alt.Chart(employee_data).mark_bar().encode(x = 'performance_score', y = 'count()')
-hist.show()
+

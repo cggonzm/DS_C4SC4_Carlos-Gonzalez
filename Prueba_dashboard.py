@@ -38,7 +38,7 @@ hist = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin = a
 hist
 
 #GRAFICO EN DONDE SE VISUALICE EL PROMEDIO DE HORAS TRABAJADAS POR EL GENERO DEL EMPLEADO
-hrs_empleado = employee_data.groupby(['gender'], as_index=False)[['average_work_hours']].mean()
+hrs_empleado = empleados.groupby(['gender'], as_index=False)[['average_work_hours']].mean()
 hrs_prom= alt.Chart(hrs_empleado).mark_bar().encode(y='gender', x=alt.X('average_work_hours', scale=alt.Scale(domain=(4000, 4500)))).properties(title='Promedio horas trabajadas por genero')
 hrs_prom
 

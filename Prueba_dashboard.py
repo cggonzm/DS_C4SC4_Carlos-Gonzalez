@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import pandas as pd
 import altair as alt
+import plotly.express as px
 
 st.title('DASHBOARD DESEMPEÑO SOCIALIZE YOUR KNOWLEDGE')
 
@@ -32,7 +33,9 @@ estado_civil = st.sidebar.selectbox('Estado civil:', empleados_performance['mari
 empleados_estado_civil = empleados_performance[empleados_performance['marital_status'] == estado_civil]
 st.write(empleados_estado_civil)
 
+#GRAFICO EN DONDE SE VISUALICE LA DISTRIBUCION DE LOS PUNTAJES DE DESEMPEÑO
 hist = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin = alt.BinParams(maxbins = 6)),
-                                                  y='count()').properties(title='Distribución puntajes de desempeño')
-                                                  
+                                                  y='count()').properties(title='Distribución puntajes de desempeño')                        
 hist
+
+

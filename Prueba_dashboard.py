@@ -2,7 +2,9 @@ import streamlit as st
 from PIL import Image
 import pandas as pd
 import altair as alt
-import plotly.express as px
+from bokeh.plotting import figure, output_file, show
+from bokeh.models import ColumnDataSource
+from bokeh.models.tools import HoverTool
 
 st.title('DASHBOARD DESEMPEÑO SOCIALIZE YOUR KNOWLEDGE')
 

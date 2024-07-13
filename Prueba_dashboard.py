@@ -45,3 +45,8 @@ hrs_prom
 #GRAFICO PARA VISUALIZAR LA EDAD DE LOS EMPLEADOS CON RESPECTO AL SALARIO DE LOS MISMOS
 edad_salario= alt.Chart(empleados).mark_point(filled=True).encode(alt.X('age'), alt.Y('salary')).properties(title='Relacion edad salario') 
 edad_salario
+
+#GRAFICO PARA VISUALIZAR LAS HORAS TRABAJADAS DE LOS EMPLEADOS CON RESPECTO AL PERFORMACE
+horas_desempeño= alt.Chart(empleados).mark_point(filled=True).encode(alt.Y('average_work_hours'), alt.X('performance_score')).properties(title='Relacion horas trabajadas salario') 
+horas_desempeño
+

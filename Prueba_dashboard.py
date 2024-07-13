@@ -46,11 +46,11 @@ chart2= alt.Chart(hrs_empleado).mark_bar().encode(y='gender', x='average_work_ho
 
 
 #GRAFICO PARA VISUALIZAR LA EDAD DE LOS EMPLEADOS CON RESPECTO AL SALARIO DE LOS MISMOS
-chart3= alt.Chart(empleados).mark_point(filled=True).encode(alt.X('age'), alt.Y('salary'), color='gender').properties(title='Relacion edad salario') 
+chart3= alt.Chart(empleados).mark_point(filled=True).encode(alt.X('age'), alt.Y('salary')).properties(title='Relacion edad salario') 
 
 
 #GRAFICO PARA VISUALIZAR LAS HORAS TRABAJADAS DE LOS EMPLEADOS CON RESPECTO AL PERFORMACE
-chart4= alt.Chart(empleados).mark_point(filled=True).encode(alt.Y('average_work_hours'), alt.X('performance_score')).properties(title='Relacion horas trabajadas salario') 
+chart4= alt.Chart(empleados).mark_point(filled=True).encode(alt.Y('average_work_hours'), alt.X('performance_score'), color='gender').properties(title='Relacion horas trabajadas salario') 
 
 #DESPLEGAR GRAFICOS
 chart1 | chart2

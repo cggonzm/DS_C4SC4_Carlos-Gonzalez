@@ -52,11 +52,10 @@ chart3= alt.Chart(empleados).mark_point(filled=True).encode(alt.X('age'), alt.Y(
 #GRAFICO PARA VISUALIZAR LAS HORAS TRABAJADAS DE LOS EMPLEADOS CON RESPECTO AL PERFORMACE
 chart4= alt.Chart(empleados).mark_point(filled=True).encode(alt.Y('average_work_hours'), alt.X('performance_score')).properties(title='Relacion horas trabajadas salario') 
 
+#DESPLEGAR GRAFICOS
 chart1 | chart2
 chart3 | chart4
 
-#
-'''
-Analisis de desempeño y datos personales de los colaboradores de socialize your knowledge.
-'''
+#CONSLUSION SOBRE EL ANALISIS MOSTRADO
+st.text('La calificacion mas frecuente en los empleados es 3, las mujeres trabajan en promedio 0.62% mas que los hombres')
 

@@ -43,5 +43,5 @@ hrs_prom= alt.Chart(hrs_empleado).mark_bar().encode(y='gender', x='average_work_
 hrs_prom
 
 #GRAFICO PARA VISUALIZAR LA EDAD DE LOS EMPLEADOS CON RESPECTO AL SALARIO DE LOS MISMOS
-edad_salario= alt.Chart(employee_data).mark_point(filled=True).encode(alt.X('age'), alt.Y('salary'))
+edad_salario= alt.Chart(empleados).mark_point(filled=True).encode(alt.X('age'), alt.Y('salary'))
 edad_salario

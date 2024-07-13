@@ -36,8 +36,8 @@ st.write(empleados_estado_civil)
 
 
 #GRAFICO EN DONDE SE VISUALICE LA DISTRIBUCION DE LOS PUNTAJES DE DESEMPEÑO
-chart1 = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin = True)
-                                                  y='count()').properties(title='Distribución puntajes de desempeño')                        
+chart1 = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin = alt.BinParams(maxbins = 6)),
+                                                  y='count()').properties(title='Distribución puntajes de desempeño')                     
 
 
 #GRAFICO EN DONDE SE VISUALICE EL PROMEDIO DE HORAS TRABAJADAS POR EL GENERO DEL EMPLEADO

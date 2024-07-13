@@ -28,8 +28,8 @@ empleados_performance = empleados_genero[(empleados_genero["performance_score"] 
 #st.write(empleados_performance)
 
 #CONTROL PARA SELECCIONAR EL ESTADO CIVIL DEL EMPLEADO
-empleados_estado_civil = st.sidebar.selectbox('Estado civil:', empleados_performance['marital_status'].unique())
-empleados_estado_civil = empleados_performance[empleados_performance['marital_status'] == marital_status]
+estado_civil = st.sidebar.selectbox('Estado civil:', empleados_performance['marital_status'].unique())
+empleados_estado_civil = empleados_performance[empleados_performance['marital_status'] == estado_civil]
 st.write(empleados_estado_civil)
 
 hist = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin = alt.BinParams(maxbins = 6)),

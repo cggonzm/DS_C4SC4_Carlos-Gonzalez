@@ -58,5 +58,6 @@ chart4 | chart3
 
 
 #CONSLUSION SOBRE EL ANALISIS MOSTRADO
+st.markdow('**CONCLUSION**')
 st.text('La calificacion mas frecuente en los empleados es 3, las mujeres trabajan en promedio 0.62% mas que los hombres')
 

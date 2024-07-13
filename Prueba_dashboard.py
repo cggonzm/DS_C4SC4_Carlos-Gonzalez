@@ -2,8 +2,6 @@ import streamlit as st
 from PIL import Image
 import pandas as pd
 import altair as alt
-from plotly.subplots import make_subplots
-import plotly.graph_objects as go
 
 st.title('DASHBOARD DESEMPEÑO SOCIALIZE YOUR KNOWLEDGE')
 

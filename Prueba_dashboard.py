@@ -50,7 +50,7 @@ chart3= alt.Chart(empleados).mark_point(filled=True).encode(alt.X('age'), alt.Y(
 
 
 #GRAFICO PARA VISUALIZAR LAS HORAS TRABAJADAS DE LOS EMPLEADOS CON RESPECTO AL PERFORMACE
-chart4= alt.Chart(empleados).mark_point(filled=True).encode(alt.Y('average_work_hours'), alt.X('performance_score')).properties(title='Relacion horas trabajadas salario') 
+chart4= alt.Chart(empleados).mark_point(filled=True).encode(alt.Y('average_work_hours'), scale=alt.Scale(domain=[3000, 5000], alt.X('performance_score')).properties(title='Relacion horas trabajadas salario') 
 
 #DESPLEGAR GRAFICOS
 chart1 | chart2

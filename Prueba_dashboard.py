@@ -10,7 +10,7 @@ Analisis de desempeño y datos personales de los colaboradores de socialize your
 '''
 
 #DESPLEGAR EL LOGOTIPO DE LA EMPRESA
-image = Image.open('logo2.png')
+image = Image.open('logo3.png')
 st.image(image, caption='Socialize your knowledge')
 
 #DATA FRAME

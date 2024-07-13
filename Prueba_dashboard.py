@@ -37,11 +37,11 @@ hist = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin = a
                                                   y='count()').properties(title='Distribución puntajes de desempeño')                        
 hist
 
+#GRAFICO PARA VISUALIZAR LA EDAD DE LOS EMPLEADOS CON RESPECTO AL SALARIO DE LOS MISMOS
+edad_salario= alt.Chart(empleados).mark_point(filled=True).encode(alt.X('age'), alt.Y('salary')).properties(title='Relacion edad salario') 
+edad_salario
+
 #GRAFICO EN DONDE SE VISUALICE EL PROMEDIO DE HORAS TRABAJADAS POR EL GENERO DEL EMPLEADO
 hrs_empleado = empleados.groupby(['gender'], as_index=False)[['average_work_hours']].mean()
 hrs_prom= alt.Chart(hrs_empleado).mark_bar().encode(y='gender', x=alt.X('average_work_hours', scale=alt.Scale(domain=(4000, 4500)))).properties(title='Promedio horas trabajadas por genero')
 hrs_prom
-
-#GRAFICO PARA VISUALIZAR LA EDAD DE LOS EMPLEADOS CON RESPECTO AL SALARIO DE LOS MISMOS
-edad_salario= alt.Chart(empleados).mark_point(filled=True).encode(alt.X('age'), alt.Y('salary')).properties(title='Relacion edad salario') 
-edad_salario

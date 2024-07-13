@@ -25,6 +25,7 @@ minScore = empleados_genero["performance_score"].min()
 maxScore = empleados_genero["performance_score"].max()
 mylios = st.sidebar.slider('performance_score', min_value=minScore, max_value=maxScore, value=[minScore, maxScore])
 empleados_performance = empleados_genero[(empleados_genero["performance_score"] >= mylios[0]) & (empleados_genero["performance_score"] <= mylios[1])].copy()
+st.write(empleados_performance)
 
 #CONTROL PARA SELECCIONAR EL ESTADO CIVIL DEL EMPLEADO
 empleados_estado_civil = st.sidebar.selectbox('Estado civil:', empleados_performance['marital_status'].unique())

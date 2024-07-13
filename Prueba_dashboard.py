@@ -33,20 +33,19 @@ empleados_estado_civil = empleados_performance[empleados_performance['marital_st
 st.write(empleados_estado_civil)
 
 #GRAFICO EN DONDE SE VISUALICE LA DISTRIBUCION DE LOS PUNTAJES DE DESEMPEÑO
-hist = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin = alt.BinParams(maxbins = 6)),
+chart1 = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin = alt.BinParams(maxbins = 6)),
                                                   y='count()').properties(title='Distribución puntajes de desempeño')                        
-hist
 
 #GRAFICO EN DONDE SE VISUALICE EL PROMEDIO DE HORAS TRABAJADAS POR EL GENERO DEL EMPLEADO
 hrs_empleado = empleados.groupby(['gender'], as_index=False)[['average_work_hours']].mean()
-hrs_prom= alt.Chart(hrs_empleado).mark_bar().encode(y='gender', x='average_work_hours').properties(title='Promedio horas trabajadas por genero')
-hrs_prom
+chart2= alt.Chart(hrs_empleado).mark_bar().encode(y='gender', x='average_work_hours').properties(title='Promedio horas trabajadas por genero')
 
 #GRAFICO PARA VISUALIZAR LA EDAD DE LOS EMPLEADOS CON RESPECTO AL SALARIO DE LOS MISMOS
-edad_salario= alt.Chart(empleados).mark_point(filled=True).encode(alt.X('age'), alt.Y('salary')).properties(title='Relacion edad salario') 
-edad_salario
+chart3= alt.Chart(empleados).mark_point(filled=True).encode(alt.X('age'), alt.Y('salary')).properties(title='Relacion edad salario') 
 
 #GRAFICO PARA VISUALIZAR LAS HORAS TRABAJADAS DE LOS EMPLEADOS CON RESPECTO AL PERFORMACE
-horas_desempeño= alt.Chart(empleados).mark_point(filled=True).encode(alt.Y('average_work_hours'), alt.X('performance_score')).properties(title='Relacion horas trabajadas salario') 
-horas_desempeño
+chart4= alt.Chart(empleados).mark_point(filled=True).encode(alt.Y('average_work_hours'), alt.X('performance_score')).properties(title='Relacion horas trabajadas salario') 
+
+chart1 | chart2
+chart3 | chart4
 

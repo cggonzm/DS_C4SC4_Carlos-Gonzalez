@@ -36,7 +36,7 @@ st.write(empleados_estado_civil)
 
 
 #GRAFICO EN DONDE SE VISUALICE LA DISTRIBUCION DE LOS PUNTAJES DE DESEMPEÑO
-chart1 = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin = True),#alt.BinParams(maxbins = 6)
+chart1 = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin = True)
                                                   y='count()').properties(title='Distribución puntajes de desempeño')                        
 
 
@@ -50,7 +50,7 @@ chart3= alt.Chart(empleados).mark_point(filled=True).encode(alt.X('age'), alt.Y(
 
 
 #GRAFICO PARA VISUALIZAR LAS HORAS TRABAJADAS DE LOS EMPLEADOS CON RESPECTO AL PERFORMACE
-chart4= alt.Chart(empleados).mark_point(filled=True).encode(alt.Y('average_work_hours'), alt.X('performance_score', bin = True)).properties(title='Relacion horas trabajadas salario') 
+chart4= alt.Chart(empleados).mark_point(filled=True).encode(alt.Y('average_work_hours', scale=alt.Scale(domain=[3500, 5200])), alt.X('performance_score', bin = True)).properties(title='Relacion horas trabajadas salario') 
 
 #DESPLEGAR GRAFICOS
 chart1 | chart2
@@ -60,5 +60,7 @@ chart4 | chart3
 #CONSLUSION SOBRE EL ANALISIS MOSTRADO
 st.markdown('**CONCLUSION**')
 st.text('La calificacion mas frecuente en los empleados es 3, las mujeres trabajan \n'
-        'en promedio 0.62% mas que los hombres')
+        'en promedio 0.62% mas que los hombres. En promedio de horas laboradas, los \n'
+         'que obtubieron una calificacion de 3 tienen un promedio mas alto. En la \n'
+         'relacion salario/edad no se observa una relacion fuerte entre las varaibles')
 

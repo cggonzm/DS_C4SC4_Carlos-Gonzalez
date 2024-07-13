@@ -54,8 +54,8 @@ chart4= alt.Chart(empleados).mark_point(filled=True).encode(alt.Y('average_work_
 
 #DESPLEGAR GRAFICOS
 chart1 | chart2
-chart3
-chart4
+chart4 | chart3
+
 
 #CONSLUSION SOBRE EL ANALISIS MOSTRADO
 st.text('La calificacion mas frecuente en los empleados es 3, las mujeres trabajan en promedio 0.62% mas que los hombres')

@@ -16,9 +16,6 @@ empleados= pd.read_csv('Employee_data.csv')
 empleados= empleados[['name_employee', 'birth_date', 'age', 'gender', 'marital_status', 'hiring_date', 'position',
                               'salary', 'performance_score', 'last_performance_date', 'average_work_hours', 'satisfaction_level', 'absences']]
 
-#CONTROL PARA SELECCIONAR APLICAR FILTROS O NO
-filtros= st.sidebar.checkbox("Aplicar filtros?", key="disabled")
-
 #CONTROL PARA SELECCIONAR EL GENERO DEL EMPLEADO
 genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
 empleados_genero = empleados[empleados['gender'] == genero]
@@ -35,6 +32,9 @@ empleados_performance = empleados_genero[(empleados_genero["performance_score"] 
 estado_civil = st.sidebar.selectbox('Estado civil:', empleados_performance['marital_status'].unique())
 empleados_estado_civil = empleados_performance[empleados_performance['marital_status'] == estado_civil]
 
+
+#CONTROL PARA SELECCIONAR APLICAR FILTROS O NO
+filtros= st.sidebar.checkbox("Aplicar filtros?", key="disabled")
 if filtros:
     st.dataframe(empleados_estado_civil)
 else:

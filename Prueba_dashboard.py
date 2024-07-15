@@ -35,10 +35,10 @@ empleados_performance = empleados_genero[(empleados_genero["performance_score"] 
 estado_civil = st.sidebar.selectbox('Estado civil:', empleados_performance['marital_status'].unique())
 empleados_estado_civil = empleados_performance[empleados_performance['marital_status'] == estado_civil]
 
-if filtros = True:
-  st.dataframe(empleados_estado_civil)
-elif filtros == True:
-  st.dataframe(empleados)
+if filtros:
+    st.dataframe(empleados_estado_civil)
+else:
+    st.dataframe(empleados)
 
 #GRAFICO EN DONDE SE VISUALICE LA DISTRIBUCION DE LOS PUNTAJES DE DESEMPEÑO
 chart1 = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin = alt.BinParams(maxbins = 6)),

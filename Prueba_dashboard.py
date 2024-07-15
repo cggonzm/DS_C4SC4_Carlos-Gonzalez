@@ -32,7 +32,7 @@ empleados_performance = empleados_genero[(empleados_genero["performance_score"] 
 #CONTROL PARA SELECCIONAR EL ESTADO CIVIL DEL EMPLEADO
 estado_civil = st.sidebar.selectbox('Estado civil:', empleados_performance['marital_status'].unique())
 empleados_estado_civil = empleados_performance[empleados_performance['marital_status'] == estado_civil]
-st.write(empleados_estado_civil)
+st.dataframe(empleados_estado_civil)
 
 
 #GRAFICO EN DONDE SE VISUALICE LA DISTRIBUCION DE LOS PUNTAJES DE DESEMPEÑO

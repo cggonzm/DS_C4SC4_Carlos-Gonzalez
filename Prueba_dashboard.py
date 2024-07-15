@@ -18,7 +18,6 @@ empleados= empleados[['name_employee', 'birth_date', 'age', 'gender', 'marital_s
 
 #CONTROL PARA SELECCIONAR APLICAR FILTROS O NO
 filtros= st.sidebar.checkbox("Aplicar filtros?", key="disabled")
-#filtros = empleados[empleados['gender'] == genero]
 
 #CONTROL PARA SELECCIONAR EL GENERO DEL EMPLEADO
 genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
@@ -35,8 +34,11 @@ empleados_performance = empleados_genero[(empleados_genero["performance_score"] 
 #CONTROL PARA SELECCIONAR EL ESTADO CIVIL DEL EMPLEADO
 estado_civil = st.sidebar.selectbox('Estado civil:', empleados_performance['marital_status'].unique())
 empleados_estado_civil = empleados_performance[empleados_performance['marital_status'] == estado_civil]
-st.dataframe(empleados_estado_civil)
 
+if filtros = True:
+  st.dataframe(empleados_estado_civil)
+elif filtros == True:
+  st.dataframe(empleados)
 
 #GRAFICO EN DONDE SE VISUALICE LA DISTRIBUCION DE LOS PUNTAJES DE DESEMPEÑO
 chart1 = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin = alt.BinParams(maxbins = 6)),

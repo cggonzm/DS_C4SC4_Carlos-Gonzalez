@@ -34,7 +34,7 @@ empleados_estado_civil = empleados_performance[empleados_performance['marital_st
 
 
 #CONTROL PARA SELECCIONAR APLICAR FILTROS O NO
-filtros= st.sidebar.checkbox("Aplicar filtros?", key="disabled")
+filtros= st.sidebar.checkbox('**Aplicar filtros?**', key="disabled")
 if filtros:
     st.dataframe(empleados_estado_civil)
 else:

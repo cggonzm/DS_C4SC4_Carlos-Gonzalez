@@ -49,7 +49,7 @@ chart1 = alt.Chart(empleados).mark_bar().encode(alt.X('performance_score', bin =
 hrs_empleado = empleados.groupby(['gender'], as_index=False)[['average_work_hours']].mean()
 chart2= alt.Chart(hrs_empleado).mark_bar().encode(y='gender', x='average_work_hours').properties(title='Promedio horas trabajadas por genero')
 
-
+#Me pareció interesante separarlo por genero el genero
 #GRAFICO PARA VISUALIZAR LA EDAD DE LOS EMPLEADOS CON RESPECTO AL SALARIO DE LOS MISMOS
 chart3= alt.Chart(empleados).mark_point(filled=True).encode(alt.X('age'), alt.Y('salary'), color='gender').properties(title='Relacion edad salario') 
 

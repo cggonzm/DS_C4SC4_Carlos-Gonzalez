@@ -18,7 +18,7 @@ empleados= empleados[['name_employee', 'birth_date', 'age', 'gender', 'marital_s
 
 #CONTROL PARA SELECCIONAR APLICAR FILTROS O NO
 genero= st.sidebar.radio('Aplicar filtros?', 'Si', 'No')
-filtros = empleados[empleados['gender'] == genero]
+f#iltros = empleados[empleados['gender'] == genero]
 
 #CONTROL PARA SELECCIONAR EL GENERO DEL EMPLEADO
 genero= st.sidebar.radio('Seleccionar genero', empleados['gender'].unique())
